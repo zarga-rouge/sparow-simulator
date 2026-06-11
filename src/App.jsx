@@ -250,6 +250,7 @@ export default function App() {
     { id:"setup",       icon:"🏪", labelFr:"Profil",       labelAr:"الملف الشخصي" },
     { id:"calculator",  icon:"🧮", labelFr:"Calculateur",  labelAr:"الحاسبة" },
     { id:"dashboard",   icon:"📊", labelFr:"Dashboard",    labelAr:"لوحة القيادة" },
+    { id:"foodcost",    icon:"💰", labelFr:"Food Cost",    labelAr:"تكلفة الطعام" },
     { id:"negotiation", icon:"🤝", labelFr:"Négociation",  labelAr:"التفاوض" },
     { id:"materials",   icon:"📦", labelFr:"Matières",     labelAr:"المواد الأولية" },
   ];
@@ -323,6 +324,7 @@ export default function App() {
         {tab==="setup" && <SetupTab restaurant={restaurant} setRestaurant={setRestaurant} onCategoryChange={handleCategoryChange} onNext={() => setTab("calculator")} lang={lang} />}
         {tab==="calculator" && <CalculatorTab items={items} restaurant={restaurant} addItem={addItem} removeItem={removeItem} updateItem={updateItem} onNext={() => setTab("dashboard")} lang={lang} summary={summary} />}
         {tab==="dashboard" && <DashboardTab summary={summary} restaurant={restaurant} recommendations={recommendations} lang={lang} />}
+        {tab==="foodcost" && <FoodCostTab lang={lang} />}
         {tab==="negotiation" && <NegotiationTab summary={summary} restaurant={restaurant} lang={lang} />}
         {tab==="materials" && <MaterialsTab lang={lang} />}
       </main>
@@ -706,6 +708,15 @@ function MaterialsTab({ lang }) {
       <div style={{ marginTop:10, fontSize:11, color:"#4B5270" }}>
         {filtered.length} résultat(s) — Données Sparow Food Tunisia 2025
       </div>
+    </div>
+  );
+}
+
+// ─── FOOD COST TAB ────────────────────────────────────────────────────────────
+function FoodCostTab({ lang }) {
+  return (
+    <div>
+      <PageHeader icon="💰" titleFr="Food Cost" titleAr="تكلفة الطعام" subtitleFr="Section en cours de développement" subtitleAr="القسم قيد التطوير" lang={lang} />
     </div>
   );
 }
