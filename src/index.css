@@ -1,0 +1,7 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0f1117; color: #e8e8e8; }
+input:focus, select:focus { outline: 1px solid #ff6b35; }
+input[type="range"] { accent-color: #ff6b35; }
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #1e2030; }
+::-webkit-scrollbar-thumb { background: #2a2d38; border-radius: 3px; }
